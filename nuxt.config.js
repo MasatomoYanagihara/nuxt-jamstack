@@ -41,4 +41,15 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // リダイレクト設定（存在しないURLにアクセスした場合、'pages/index.vue'にリダイレクト）
+  // router: {
+  //   extendRoutes(routes, resolve) {
+  //     routes.push({
+  //       name: 'notFound',
+  //       path: '*',
+  //       component: resolve(__dirname, 'pages/index.vue'),
+  //     })
+  //   },
+  // },
 }
