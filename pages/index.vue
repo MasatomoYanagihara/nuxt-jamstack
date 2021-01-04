@@ -1,68 +1,33 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">nuxt-jamstack</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <layout-wrapper>
+    <layout-visual
+      title="NUXT SAMPLE SITE DEMO"
+      message="お知らせメニューをmicroCMSで導入したDEMOサイトになります。"
+    />
+    <div class="w-full md:max-w-3xl mx-auto pt-20 px-6 md:px-0">
+      <base-heading>おすすめメニュー</base-heading>
+      <layout-menu-list
+        wrap-class="flex md:flex-wrap justify-between mb-20 md:mb-0"
+        item-class="md:w-56 mb-20 shadow-lg bg-gray-200"
+        block-class="max-w"
+        image-class="w-full"
+        data-class="px-6 py-4"
+        :flag-body="false"
+      />
+      <base-button name="メニューの一覧" link="/menu/" />
+      <base-heading>お知らせ</base-heading>
+      <div class="mb-20">
+        <layout-information-list />
       </div>
+      <base-button name="お知らせの一覧" link="/information/" />
     </div>
-  </div>
+  </layout-wrapper>
 </template>
 
-<script>
-export default {}
-</script>
+<script></script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.visual-home {
+  background-image: url('~@/assets/img/visual-home.jpg');
 }
 </style>
