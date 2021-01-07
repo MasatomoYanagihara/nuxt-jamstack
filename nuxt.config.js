@@ -1,3 +1,5 @@
+const { API_KEY, API_URL } = process.env
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -11,7 +13,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'process.env.npm_package_description' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'process.env.npm_package_description',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -44,10 +50,15 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
-
   generate: {
-    fallback: true
-  }
+    fallback: true,
+  },
+  publicRuntimeConfig: {
+    apiUrl: API_URL
+  },
+  privateRuntimeConfig: {
+    apiKey: API_KEY
+  },
 
   // リダイレクト設定（存在しないURLにアクセスした場合、'pages/index.vue'にリダイレクト）
   // router: {
