@@ -26,7 +26,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/filter.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -54,10 +54,10 @@ export default {
     fallback: true,
   },
   publicRuntimeConfig: {
-    apiUrl: API_URL
+    apiUrl: API_URL,
   },
   privateRuntimeConfig: {
-    apiKey: API_KEY
+    apiKey: API_KEY,
   },
 
   // リダイレクト設定（存在しないURLにアクセスした場合、'pages/index.vue'にリダイレクト）
